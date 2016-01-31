@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface ImageVIewController : UIViewController
+@interface ImageVIewController : ViewController
 
 @property (strong, nonatomic) UIImage *editImage;
 

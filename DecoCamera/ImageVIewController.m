@@ -16,7 +16,7 @@
 @property (assign, nonatomic) BOOL isGray;
 
 - (IBAction)saveButtonAction:(id)sender;
-- (IBAction)grayButttonAction:(id)sender;
+- (IBAction)grayButtonAction:(id)sender;
 - (IBAction)backButtonAction:(id)sender;
 
 @end
@@ -38,7 +38,7 @@
 
 - (IBAction)saveButtonAction:(id)sender {
     
-    SEL selector = @selector(inCompleteCapture:didFinishSavingWithError:contextInfo:);
+    SEL selector = @selector(onCompleteCapture:didFinishSavingWithError:contextInfo:);
     // 画像を保存する
     UIImageWriteToSavedPhotosAlbum(self.imageView.image, self, selector, NULL);
 }
@@ -74,6 +74,9 @@
         CGContextRef context = CGBitmapContextCreate(nil, image.size.width, image.size.height, 8, 0, colorSpace, kCGImageAlphaNone);
         
         // ビットマップコンテキストに画像を描画します。
+        CGContextDrawImage(context, imageRect, [image CGImage]);
+        
+        // ビットマップコンテキストに描画された画像を取得します
         CGImageRef imageRef = CGBitmapContextCreateImage(context);
         
         // 取得した画像からUIImageを作ります。

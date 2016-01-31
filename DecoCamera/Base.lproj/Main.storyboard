@@ -113,7 +113,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="grayButttonAction:" destination="Hsc-42-of7" eventType="touchUpInside" id="b2M-UV-Jbu"/>
+                                    <action selector="grayButtonAction:" destination="Hsc-42-of7" eventType="touchUpInside" id="tHh-iH-N8t"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Uy-6G-1yO">
